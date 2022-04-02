@@ -37,10 +37,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ribbon1));
             this.tab1 = this.Factory.CreateRibbonTab();
             this.group1 = this.Factory.CreateRibbonGroup();
-            this.menu1 = this.Factory.CreateRibbonMenu();
-            this.menu2 = this.Factory.CreateRibbonMenu();
             this.buttonSave = this.Factory.CreateRibbonButton();
             this.buttonExit = this.Factory.CreateRibbonButton();
+            this.menu1 = this.Factory.CreateRibbonMenu();
+            this.menu2 = this.Factory.CreateRibbonMenu();
             this.tab1.SuspendLayout();
             this.group1.SuspendLayout();
             this.SuspendLayout();
@@ -59,19 +59,6 @@
             this.group1.Label = "示例组";
             this.group1.Name = "group1";
             // 
-            // menu1
-            // 
-            this.menu1.Items.Add(this.menu2);
-            this.menu1.Label = "menu测试";
-            this.menu1.Name = "menu1";
-            this.menu1.ShowImage = true;
-            // 
-            // menu2
-            // 
-            this.menu2.Label = "menu2";
-            this.menu2.Name = "menu2";
-            this.menu2.ShowImage = true;
-            // 
             // buttonSave
             // 
             this.buttonSave.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
@@ -89,6 +76,19 @@
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.ShowImage = true;
             // 
+            // menu1
+            // 
+            this.menu1.Items.Add(this.menu2);
+            this.menu1.Label = "menu测试";
+            this.menu1.Name = "menu1";
+            this.menu1.ShowImage = true;
+            // 
+            // menu2
+            // 
+            this.menu2.Label = "menu2";
+            this.menu2.Name = "menu2";
+            this.menu2.ShowImage = true;
+            // 
             // Ribbon1
             // 
             this.Name = "Ribbon1";
@@ -96,7 +96,7 @@
             // Ribbon1.OfficeMenu
             // 
             this.OfficeMenu.Items.Add(this.menu1);
-            this.RibbonType = "Microsoft.Excel.Workbook";
+            this.RibbonType = "Microsoft.Excel.Workbook, Microsoft.Word.Document";
             this.Tabs.Add(this.tab1);
             this.Load += new Microsoft.Office.Tools.Ribbon.RibbonUIEventHandler(this.Ribbon1_Load);
             this.tab1.ResumeLayout(false);

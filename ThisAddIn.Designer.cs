@@ -25,12 +25,12 @@ namespace MyExcelAddIn {
         private global::System.Object missing = global::System.Type.Missing;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "17.0.0.0")]
-        internal Microsoft.Office.Interop.Excel.Application Application;
+        internal Microsoft.Office.Interop.Word.Application Application;
         
         /// 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public ThisAddIn(global::Microsoft.Office.Tools.Excel.ApplicationFactory factory, global::System.IServiceProvider serviceProvider) : 
+        public ThisAddIn(global::Microsoft.Office.Tools.Word.ApplicationFactory factory, global::System.IServiceProvider serviceProvider) : 
                 base(factory, serviceProvider, "AddIn", "ThisAddIn") {
             Globals.Factory = factory;
         }
@@ -41,7 +41,7 @@ namespace MyExcelAddIn {
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void Initialize() {
             base.Initialize();
-            this.Application = this.GetHostItem<Microsoft.Office.Interop.Excel.Application>(typeof(Microsoft.Office.Interop.Excel.Application), "Application");
+            this.Application = this.GetHostItem<Microsoft.Office.Interop.Word.Application>(typeof(Microsoft.Office.Interop.Word.Application), "Application");
             Globals.ThisAddIn = this;
             global::System.Windows.Forms.Application.EnableVisualStyles();
             this.InitializeCachedData();
@@ -182,7 +182,7 @@ namespace MyExcelAddIn {
         
         private static ThisAddIn _ThisAddIn;
         
-        private static global::Microsoft.Office.Tools.Excel.ApplicationFactory _factory;
+        private static global::Microsoft.Office.Tools.Word.ApplicationFactory _factory;
         
         private static ThisRibbonCollection _ThisRibbonCollection;
         
@@ -200,7 +200,7 @@ namespace MyExcelAddIn {
             }
         }
         
-        internal static global::Microsoft.Office.Tools.Excel.ApplicationFactory Factory {
+        internal static global::Microsoft.Office.Tools.Word.ApplicationFactory Factory {
             get {
                 return _factory;
             }
