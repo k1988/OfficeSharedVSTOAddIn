@@ -12,5 +12,10 @@ namespace MyExcelAddIn
         {
 
         }
+
+        private void buttonSave_Click(object sender, RibbonControlEventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show($"id:{this.RibbonId} Type:{this.RibbonType} Save clicked", this.Name, System.Windows.Forms.MessageBoxButtons.OK);
+        }
     }
 }
