@@ -34,7 +34,13 @@ namespace MyExcelAddIn {
                 base(factory, serviceProvider, "AddIn", "ThisAddIn") {
             Globals.Factory = factory;
         }
-        
+
+        public ThisAddIn(global::Microsoft.Office.Tools.Excel.ApplicationFactory factory, global::System.IServiceProvider serviceProvider) :
+               base(factory, serviceProvider, "AddIn", "ThisAddIn")
+        {
+            Globals.Factory = factory;
+        }
+
         /// 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "17.0.0.0")]
@@ -182,7 +188,7 @@ namespace MyExcelAddIn {
         
         private static ThisAddIn _ThisAddIn;
         
-        private static global::Microsoft.Office.Tools.Word.ApplicationFactory _factory;
+        private static global::Microsoft.Office.Tools.Factory _factory;
         
         private static ThisRibbonCollection _ThisRibbonCollection;
         
@@ -200,7 +206,7 @@ namespace MyExcelAddIn {
             }
         }
         
-        internal static global::Microsoft.Office.Tools.Word.ApplicationFactory Factory {
+        internal static global::Microsoft.Office.Tools.Factory Factory {
             get {
                 return _factory;
             }
